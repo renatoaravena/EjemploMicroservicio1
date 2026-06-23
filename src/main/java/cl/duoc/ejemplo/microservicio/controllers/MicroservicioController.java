@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/microservicio")
 public class MicroservicioController {
 
-	@PostMapping
+	@PostMapping("/mensaje")
 	public ResponseEntity<String> create(@RequestBody Map<String, String> body) {
 
 		System.out.println("Se recibió llamada a endpoint POST");
