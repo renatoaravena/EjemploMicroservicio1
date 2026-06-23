@@ -19,10 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class MicroservicioController {
 
 	@PostMapping("/mensaje")
-	public ResponseEntity<String> create(@RequestBody Map<String, String> body) {
+	public String mensaje() {
 
-		System.out.println("Se recibió llamada a endpoint POST");
-		return ResponseEntity.ok("Integración OK - POST, recibido body: " + body);
+		System.out.println("Integración OK al backend");
+		return "{\"mensaje\": \"Integración OK al backend\"}";
 	}
 
 	@GetMapping("/{id}")
